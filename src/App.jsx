@@ -12,6 +12,10 @@ import {
   Key
 } from 'lucide-react';
 
+/**
+ * ROCHVENUS LOGO COMPONENT
+ * This SVG logo uses gradients for a premium feel.
+ */
 const RochvenusLogo = ({ className = "w-12 h-12" }) => (
   <div className={`${className} relative flex items-center justify-center`}>
     <svg viewBox="0 0 100 100" className="w-full h-full drop-shadow-sm">
@@ -57,15 +61,18 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-white font-sans text-slate-900 overflow-x-hidden selection:bg-blue-100 selection:text-blue-900">
+      
+      {/* NAVIGATION BAR */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'}`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-4">
             <RochvenusLogo className="w-12 h-12" />
             <div className="flex flex-col leading-tight pt-1">
-              <span className="font-black text-2xl tracking-tighter text-slate-900 uppercase leading-none">Rochvenus</span>
-              <span className="text-[9px] font-bold tracking-[0.45em] text-blue-600 uppercase ml-0.5 mt-1">Technology</span>
+              <span className="font-black text-2xl tracking-tighter text-slate-900 uppercase">Rochvenus</span>
+              <span className="text-[9px] font-bold tracking-[0.45em] text-blue-600 uppercase ml-0.5">Technology</span>
             </div>
           </div>
+
           <div className="hidden md:flex items-center gap-8">
             <a href="#solutions" className="text-gray-600 hover:text-blue-700 font-bold transition-colors text-sm uppercase tracking-widest">Coatings</a>
             <a href="#references" className="text-gray-600 hover:text-blue-700 font-bold transition-colors text-sm uppercase tracking-widest">Cases</a>
@@ -76,12 +83,14 @@ const App = () => {
               Contact Us
             </a>
           </div>
+
           <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </nav>
 
+      {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-40 overflow-hidden text-center lg:text-left">
         <div className="absolute top-0 right-0 -z-10 w-2/3 h-full bg-gradient-to-l from-blue-50/40 to-transparent rounded-bl-[150px]"></div>
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -97,8 +106,8 @@ const App = () => {
             <p className="text-xl text-slate-600 max-w-lg leading-relaxed font-medium mx-auto lg:mx-0">
               Revolutionary invisible protection for industrial, commercial, and solar assets. Keep surfaces cleaner and safer.
             </p>
-            <div className="flex flex-col sm:row gap-4 pt-4 justify-center lg:justify-start">
-              <a href="#solutions" className="px-10 py-5 bg-blue-700 text-white rounded-2xl font-black flex items-center justify-center gap-3 hover:bg-blue-800 transition-all shadow-2xl shadow-blue-200 group uppercase tracking-widest">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start">
+              <a href="#solutions" className="px-10 py-5 bg-blue-700 text-white rounded-2xl font-black flex items-center justify-center gap-3 hover:bg-blue-800 transition-all shadow-2xl shadow-blue-200 group uppercase tracking-widest text-center">
                 Explore Systems <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a href="#references" className="px-10 py-5 bg-white border border-slate-200 text-slate-900 rounded-2xl font-black hover:bg-slate-50 transition-all text-center uppercase tracking-widest">
@@ -114,26 +123,27 @@ const App = () => {
         </div>
       </section>
 
-      <section id="solutions" className="py-32 bg-slate-50">
+      {/* CORE TECHNOLOGY */}
+      <section id="solutions" className="py-32 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-black mb-16 tracking-tight uppercase">Core Technology</h2>
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="p-12 rounded-[56px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-              <Droplets className="w-12 h-12 text-blue-700 mb-8 mx-auto" />
+            <div className="p-12 rounded-[56px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+              <Droplets className="w-12 h-12 text-blue-700 mb-8 mx-auto group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-black mb-4 uppercase tracking-tighter">Anti-Dirt</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Super Hydrophilicity technology. Water spreads evenly to lift away grime naturally for a permanent self-cleaning effect.
               </p>
             </div>
-            <div className="p-12 rounded-[56px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-              <Wind className="w-12 h-12 text-emerald-700 mb-8 mx-auto" />
+            <div className="p-12 rounded-[56px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+              <Wind className="w-12 h-12 text-emerald-700 mb-8 mx-auto group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-black mb-4 uppercase tracking-tighter">Anti-Dust</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Mesoporous disruption. Prevents carbon and organic dust from bonding to micro-pores on glass and solar panels.
               </p>
             </div>
-            <div className="p-12 rounded-[56px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all">
-              <ShieldCheck className="w-12 h-12 text-slate-700 mb-8 mx-auto" />
+            <div className="p-12 rounded-[56px] bg-white border border-slate-100 shadow-sm hover:shadow-xl transition-all group">
+              <ShieldCheck className="w-12 h-12 text-slate-700 mb-8 mx-auto group-hover:scale-110 transition-transform" />
               <h3 className="text-2xl font-black mb-4 uppercase tracking-tighter">Anti-Corrosion</h3>
               <p className="text-slate-500 text-sm leading-relaxed">
                 Advanced Sol-Gel Film. 7H hardness bonds permanently to shield against acid rain and salt spray in harsh environments.
@@ -143,6 +153,62 @@ const App = () => {
         </div>
       </section>
 
+      {/* PARTNER PORTAL SECTION */}
+      <section id="portal" className="py-24 bg-blue-50 scroll-mt-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="bg-white p-12 rounded-[60px] shadow-xl border border-blue-100">
+            <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 shadow-lg shadow-blue-200">
+              <Key className="text-white w-8 h-8" />
+            </div>
+            <h2 className="text-3xl font-black mb-4 uppercase tracking-tighter">Partner Portal</h2>
+            <p className="text-slate-500 mb-8 font-medium">Access technical data sheets, project reports, and secure asset monitoring.</p>
+            <div className="flex flex-col gap-4">
+              <button className="w-full py-4 bg-slate-900 text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-blue-700 transition-all shadow-lg shadow-slate-200">
+                Sign In with Key
+              </button>
+              <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Request Access via info@rochvenus.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CASE REFERENCES SECTION */}
+      <section id="references" className="py-32 bg-white scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight uppercase">Case References</h2>
+            <p className="text-slate-500 font-medium text-lg">Global experience, measurable results.</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div className="group">
+               <div className="aspect-video bg-slate-50 rounded-[60px] mb-8 overflow-hidden flex items-center justify-center relative border border-slate-100">
+                  <Building2 className="w-20 h-20 text-slate-200 group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest text-slate-900 shadow-sm">
+                    Facade Protection
+                  </div>
+               </div>
+               <div className="px-6 text-center md:text-left">
+                 <h3 className="text-3xl font-black mb-4 tracking-tighter uppercase underline decoration-blue-600 decoration-4 underline-offset-8">Palace Museum</h3>
+                 <p className="text-slate-500 text-sm leading-relaxed font-medium">Preserving porous stone facades from grime and algae growth since late 2023.</p>
+               </div>
+            </div>
+            <div className="group">
+               <div className="aspect-video bg-slate-50 rounded-[60px] mb-8 overflow-hidden flex items-center justify-center relative border border-slate-100">
+                  <Sun className="w-20 h-20 text-slate-200 group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute bottom-8 left-8 bg-white/95 backdrop-blur px-6 py-2 rounded-full text-xs font-black uppercase tracking-widest text-slate-900 shadow-sm">
+                    Solar Efficiency
+                  </div>
+               </div>
+               <div className="px-6 text-center md:text-left">
+                 <h3 className="text-3xl font-black mb-4 tracking-tighter uppercase underline decoration-emerald-600 decoration-4 underline-offset-8">CitiTower Solar</h3>
+                 <p className="text-slate-500 text-sm leading-relaxed font-medium">Maintaining peak energy generation for over 2 years without manual cleaning.</p>
+               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
       <footer className="bg-slate-900 py-24 text-white text-center">
         <div className="max-w-7xl mx-auto px-6">
           <RochvenusLogo className="w-20 h-20 mx-auto mb-8 bg-white p-4 rounded-[30px]" />
