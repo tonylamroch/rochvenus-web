@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { 
-  ShieldCheck, 
   Mail,
   Menu,
   X,
@@ -87,8 +86,8 @@ const App = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg border-t border-slate-100">
             <div className="px-6 py-4 flex flex-col gap-4">
-              <a href="#portal" className="flex items-center gap-2 text-slate-400 hover:text-blue-700 font-bold transition-colors text-xs uppercase tracking-widest px-4 py-2 border border-slate-100 rounded-full">
-                <Key className="w-3 h-3" /> Partner Sign In
+              <a href="#portal" className="flex items-center gap-2 text-slate-400 hover:text-blue-700 font-bold transition-colors text-sm uppercase tracking-widest px-4 py-2 border border-slate-100 rounded-full">
+                <Key className="w-4 h-4" /> Partner Sign In
               </a>
               <a href="mailto:info@rochvenus.com" className="bg-slate-900 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl font-black text-sm transition-all shadow-xl shadow-slate-200 uppercase text-center">
                 Contact Us
@@ -105,7 +104,7 @@ const App = () => {
             src="https://gamma.app/embed/6p6yvwymicf2l2x" 
             style={{ width: '100%', height: 'calc(100vh - 96px)', minHeight: '600px', border: 'none' }} 
             allow="fullscreen" 
-            title="Next-Gen Maintenance Starts Here"
+            title="Rochvenus Technology"
           ></iframe>
         </div>
       </main>
